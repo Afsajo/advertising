@@ -10,8 +10,18 @@
 @section('content')
     <!-- Page Heading -->
 
-    <h1 class="h3 mb-2 text-gray-800"> {{ $title }} </h1>
 
+  <div class="d-flex justify-content-between align-items-center">
+        <h1 class="h3 mb-2 text-gray-800"> {{ $title }} </h1>
+        @if($pemesanan->bukti != null)
+            <a href="{{ route('laporan.invoice',$pemesanan->id) }}" class="btn btn-sm btn-primary btn-icon-split p-0">
+                <span class="icon text-white-50">
+                    <i class="fas fa-print"></i>
+                </span>
+                <span class="text"> Invoice </span>
+            </a>
+        @endif
+    </div>
     <hr class="sidebar-divider">
 
     @if ($message = Session::get('success'))
@@ -128,8 +138,7 @@
         <h4 class="alert-heading">Informasi</h4>
         <ol>
             <li>Masukkan ID PESANAN di berita acara transfer saat melakukan transfer ke rekening Admin.</li>
-            <li>Setelah melakukan pembayaran transfer harap segera konfirmasi bukti pembayaran ke nomor Admin : WA 0813 4537
-                2617</li>
+            <li>Setelah melakukan pembayaran transfer harap segera konfirmasi bukti pembayaran ke nomor Admin : WA +62-813-6636-1991 +62-812-7271-7060 </li>
         </ol>
     </div>
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BankController;
 use App\Http\Controllers\GuestProductController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\MemberKeranjangController;
 use App\Http\Controllers\MemberPemesananController;
 
@@ -23,6 +24,9 @@ Route::middleware(['auth', 'user-access:admin'])->prefix('admin')->group(functio
     Route::resource('bank', BankController::class);
     Route::get('/pemesanan', [AdminPemesananController::class, 'index'])->name('admin.pemesanan.index');
     Route::get('/pemesanan/{pemesanan}', [AdminPemesananController::class, 'detail'])->name('admin.pemesanan.detail');
+
+    Route::get('/laporan/member/', [LaporanController::class, 'member'])->name('laporan.member');
+    Route::get('/laporan/pembelian', [LaporanController::class, 'pembelian'])->name('laporan.pembelian');
 
 });
 
@@ -44,5 +48,7 @@ Route::middleware(['auth', 'user-access:member'])->prefix('member')->group(funct
 
 });
 
-
+Route::middleware(['auth', 'user-access:member|admin'])->prefix('all')->group(function () {
+    Route::get('/laporan/invoice/{id}', [LaporanController::class, 'invoice'])->name('laporan.invoice');
+});
 

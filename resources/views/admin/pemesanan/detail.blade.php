@@ -10,7 +10,17 @@
 @section('content')
     <!-- Page Heading -->
 
-    <h1 class="h3 mb-2 text-gray-800"> {{ $title }} </h1>
+    <div class="d-flex justify-content-between align-items-center">
+        <h1 class="h3 mb-2 text-gray-800"> {{ $title }} </h1>
+        <a href="{{ route('laporan.invoice',$pemesanan->id) }}" class="btn btn-sm btn-primary btn-icon-split p-0">
+
+            <span class="icon text-white-50">
+                <i class="fas fa-print"></i>
+            </span>
+            <span class="text"> Invoice </span>
+        </a>
+
+    </div>
 
     <hr class="sidebar-divider">
 
@@ -111,58 +121,58 @@
 
 
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="card shadow mb-4">
-                    <!-- Card Header - Dropdown -->
-                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Informasi Pembayaran</h6>
-                    </div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Tanggal</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                    {{ $pemesanan->updated_at->translatedFormat('l, j M Y H:i') }}
-                                </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Informasi Pembayaran</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Tanggal</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                {{ $pemesanan->updated_at->translatedFormat('l, j M Y H:i') }}
                             </div>
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Bank</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                    {{ $pemesanan->bank_bank }}
-                                </div>
+                        </div>
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Bank</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                {{ $pemesanan->bank_bank }}
                             </div>
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Rekening</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                    {{ $pemesanan->bank_rekening }}
-                                </div>
+                        </div>
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Rekening</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                {{ $pemesanan->bank_rekening }}
                             </div>
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Pemilik</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                    {{ $pemesanan->bank_pemilik }}
-                                </div>
+                        </div>
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Pemilik</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                {{ $pemesanan->bank_pemilik }}
                             </div>
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Transfer</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                    <a href="{{ $pemesanan->bukti }}" target="_blank">
-                                        <img src="{{ $pemesanan->bukti }}" class="imgbukti" alt="bukti">
-                                    </a>
-                                </div>
+                        </div>
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Transfer</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                <a href="{{ $pemesanan->bukti }}" target="_blank">
+                                    <img src="{{ $pemesanan->bukti }}" class="imgbukti" alt="bukti">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
@@ -250,9 +260,4 @@
 
 
     </div>
-
-
-
 @endsection
-
-

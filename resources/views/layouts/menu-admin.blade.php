@@ -52,13 +52,13 @@
          <div class="sidebar-heading">
              Laporan
          </div>
-         <li class="nav-item {{ request()->is('admin/laporan/product*') ? 'active' : '' }}">
-             <a class="nav-link mb-0 pb-0" href="{{ route('product.index') }}">
+         <li class="nav-item {{ request()->is('laporan/pembelian*') ? 'active' : '' }}">
+             <a class="nav-link mb-0 pb-0" href="{{ route('laporan.pembelian') }}">
                  <i class="fas fa-fw fa-print"></i>
                  <span>Pembelian</span></a>
          </li>
-         <li class="nav-item {{ request()->is('admin/laporan/member*') ? 'active' : '' }}">
-             <a class="nav-link" href="{{ route('product.index') }}">
+         <li class="nav-item {{ request()->is('laporan/member*') ? 'active' : '' }}">
+             <a class="nav-link" href="{{ route('laporan.member') }}">
                  <i class="fas fa-fw fa-print"></i>
                  <span>Member</span></a>
          </li>

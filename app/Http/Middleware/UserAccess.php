@@ -8,20 +8,17 @@ use Symfony\Component\HttpFoundation\Response;
 
 class UserAccess
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-    // public function handle(Request $request, Closure $next): Response
-    // {
-    //     return $next($request);
-    // }
+
      public function handle(Request $request, Closure $next, $level): Response
      {
-        if(auth()->user()->level == $level){
-        return $next($request);
-     }
-     return response()->json(['You do not have permission to access for this page.']);
+        // if(auth()->user()->level == $level){
+        //     return $next($request);
+        // }
+
+        $levelsArray = explode('|', $level);
+        if (in_array(auth()->user()->level, $levelsArray)) {
+            return $next($request);
+        }
+        return response()->json(['You do not have permission to access for this page.']);
      }
 }

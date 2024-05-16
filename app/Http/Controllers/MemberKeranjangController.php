@@ -20,8 +20,10 @@ class MemberKeranjangController extends Controller
     public function add(KeranjangAddRequest $request)
     {
         Keranjang::firstOrCreate(
-            ['product_id' => $request->product_id],
-            ['user_id' => Auth::User()->id]
+            [
+                'product_id' => $request->product_id,
+                'user_id' => Auth::User()->id
+            ]
         );
         return redirect()->back()
             ->with('success', 'Masukkan Keranjang Produk Telah Berhasil.');
