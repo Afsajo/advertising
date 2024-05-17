@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ $title ?? config('app.name') }}</title>
+    <title>{{ isset($title) ? $title .' - '. config('app.name') : config('app.name') }}</title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
