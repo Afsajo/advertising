@@ -1,277 +1,122 @@
 
+# Hi Bos, I'm Azlansaja! 👋
+
+
 # Project CV. Fajar Advertising
 
 Panduan Instalasi Website Ke Hosting.
 
 
 
-## Authors
+## Persiapan
 
-- [@octokatherine](https://www.github.com/octokatherine)
+1. Buat Akun Github
+2. Fork (Copy) Project ini ke akun Github Anda
+*Sebab Link ini akan dijadikan Private
 
+3. Login ke Akun Hosting Anda dan Gunakan Terminal
 
-## Appendix
-
-Any additional information goes here
-
-
-## API Reference
-
-#### Get all items
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
-
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
-
-## Deployment
-
-To deploy this project run
-
+## Terminal
+4. Masuk Ke lokasi Root HOSTING Anda [Lokasi bebas, usahkan jangan di folder public_html ya!], contoh
 ```bash
-  npm run deploy
+  cd repository
 ```
+*Artinya anda masuk ke folder root dengan nama repository, ini adalah lokasi kita untuk simpan file project ini.
 
+*Jika folder repository tidak ada, silahkan dibuat terlebih dahulu
 
-## Demo
-
-Insert gif or link to demo
-
-
-## Documentation
-
-[Documentation](https://linktodocumentation)
-
-
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-
-## Features
-
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
-
-
-## 🚀 About Me
-I'm a full stack developer...
-
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
-
-
-# Hi, I'm Katherine! 👋
-
-
-## 🛠 Skills
-Javascript, HTML, CSS...
-
-
-## Lessons Learned
-
-What did you learn while building this project? What challenges did you face and how did you overcome them?
-
-
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
-
-
-## Run Locally
-
-Clone the project
-
+5. Clone (Download) project ini ke lokasi root dengan nama repository
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Azlan-saja/advertising.git
 ```
 
-Go to the project directory
-
+6. Setelah clone selesai, masuk ke folder proyek Anda
 ```bash
-  cd my-project
+  cd advertising
 ```
-
-Install dependencies
-
+7. Jalankan perintah berikut untuk meng-install dependency Composer
 ```bash
-  npm install
+  composer install
 ```
-
-Start the server
-
+8. Konfigurasi Environment dengan Salin file .env.example menjadi .env, perintahnya
 ```bash
-  npm run start
+  cp .env.example .env
 ```
-
-
-## Installation
-
-Install my-project with npm
-
+9. Generate kunci application Laravel, dengan perintah
 ```bash
-  npm install my-project
-  cd my-project
+  php artisan key:generate
 ```
-    
-## Usage/Examples
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
-
-
-## Used By
-
-This project is used by the following companies:
-
-- Company 1
-- Company 2
-
-
-## Support
-
-For support, email fake@fake.com or join our Slack channel.
-
-
-## Roadmap
-
-- Additional browser support
-
-- Add more integrations
-
-
-## Optimizations
-
-What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
-
-
-## Other Common Github Profile Sections
-👩‍💻 I'm currently working on...
-
-🧠 I'm currently learning...
-
-👯‍♀️ I'm looking to collaborate on...
-
-🤔 I'm looking for help with...
-
-💬 Ask me about...
-
-📫 How to reach me...
-
-😄 Pronouns...
-
-⚡️ Fun fact...
-
-
-## Feedback
-
-If you have any feedback, please reach out to us at fake@fake.com
-
-
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-
-## Badges
-
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
-
-## Color Reference
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
-
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
-## FAQ
-
-#### Question 1
-
-Answer 1
-
-#### Question 2
-
-Answer 2
-
-
-## Related
-
-Here are some related projects
-
-[Awesome README](https://github.com/matiassingers/awesome-readme)
-
-
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
-## Tech Stack
-
-**Client:** React, Redux, TailwindCSS
-
-**Server:** Node, Express
-
-
-## Running Tests
-
-To run tests, run the following command
-
+10. Konfigurasi Database dengan cara edit file .env untuk menyesuaikan konfigurasi database sesuai dengan pengaturan server hosting Anda. Misalnya:
 ```bash
-  npm run test
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=username_database
+DB_PASSWORD=password_database
+
+```
+*Tambahan Edit di file .env [Sesuaikan]
+```bash
+APP_NAME=Advertising
+APP_DEBUG=false
+APP_URL=https://advertising.com
+APP_LOCALE=id
 ```
 
+11. Restore database, dengan perintah
+```bash
+  php artisan migrate
+```
+12. Isi data sample untuk login admin dan member, dengan perintah
+```bash
+  php artisan db:seed
+```
+*Login Sample 
+```bash
+*Member
+  Username : member
+  Password : password  
+
+*Admin
+  Username : admin
+  Password : password  
+
+```
+13. Jalan perintah ini dengan tujuan Gambar produk dan download Laporan berfungsi dengan baik.
+```bash
+  php artisan storage:link
+```
+
+## LANJUTAN
+14. Didalam folder repository, cari folder public.
+15. Copy semua isi an dan tempelkan ke folder public_html
+16. Buka file index.php dan edit menjadi seperti ini.
+*Sebelum Edit
+```bash
+ 
+// Register the Composer autoloader...
+require __DIR__.'/../vendor/autoload.php';
+
+// Bootstrap Laravel and handle the request...
+(require_once __DIR__.'/../bootstrap/app.php')
+    ->handleRequest(Request::capture());
+```
+*Setelah Edit
+```bash
+ 
+// Register the Composer autoloader...
+require __DIR__.'/../repository/advertising/vendor/autoload.php';
+
+// Bootstrap Laravel and handle the request...
+(require_once __DIR__.'/../repository/advertising/bootstrap/app.php')
+    ->handleRequest(Request::capture());
+```
+16. Silahkan Akses Web Anda
+*Contoh
+```bash
+  https://advertising.com
+```
+
+## Penutup
+Semoga Berjalan Lancar Bos.
