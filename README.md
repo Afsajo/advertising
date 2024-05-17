@@ -12,9 +12,10 @@ Panduan Instalasi Website Ke Hosting.
 
 1. Buat Akun Github
 2. Fork (Copy) Project ini ke akun Github Anda
+
 *Sebab Link ini akan dijadikan Private
 
-3. Login ke Akun Hosting Anda dan Gunakan Terminal
+4. Login ke Akun Hosting Anda dan Gunakan Terminal
 
 ## Terminal
 4. Masuk Ke lokasi Root HOSTING Anda [Lokasi bebas, usahkan jangan di folder public_html ya!], contoh
@@ -92,6 +93,7 @@ APP_LOCALE=id
 14. Didalam folder repository, cari folder public.
 15. Copy semua isi an dan tempelkan ke folder public_html
 16. Buka file index.php dan edit menjadi seperti ini.
+
 *Sebelum Edit
 ```bash
  
